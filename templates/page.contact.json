@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_UFHTGk": {
+      "type": "rich-text",
+      "blocks": {
+        "text_8iR8PM": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>We'd love to hear from you - please use the form to send us your message or ideas.</h3>"
+          }
+        }
+      },
+      "block_order": [
+        "text_8iR8PM"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact Us",
+        "heading_size": "h1",
+        "color_scheme": "scheme-3",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "custom_liquid_AgKarK": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% for policy in shop.policies %}\n  {% if policy.url contains 'contact-information' %}\n<div class=\"isolate page-width\">\n  <div class=\"rich-text content-container color-scheme-1 gradient section-template--15988030865502__rich_text_g74n6n-padding\">\n    <div class=\"rich-text__wrapper rich-text__wrapper--center\">\n      <div class=\"rich-text__blocks left\">\n    <h2 class=\"rich-text__heading rte inline-richtext h1 scroll-trigger animate--slide-in\">{{ policy.title }}</h2>\n<div class=\"rich-text__text rte scroll-trigger animate--slide-in\" data-cascade=\"\" style=\"--animation-order: 2;\">{{ policy.body }}</div>\n</div></div></div></div>\n  {% endif %}\n{% endfor %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "rich_text_UFHTGk",
+    "form",
+    "custom_liquid_AgKarK"
+  ]
+}

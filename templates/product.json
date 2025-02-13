@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "none"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "custom_liquid_KHdGPT": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "collapsible_tab_teArbz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product Description",
+            "icon": "question_mark",
+            "content": "{{ product.description }}",
+            "page": ""
+          }
+        },
+        "collapsible_tab_q74wPj": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Sustainability Commitment",
+            "icon": "leaf",
+            "content": "<h3>Our Commitment To Sustainability</h3><p>Sustainable living has become a hot trend for anyone who understands that the Earth won't last forever. 😏 It's simply a way of living that requires as few resources as possible and causes the least amount of damage to the environment. 🌍 </p><p>Sustainability is not just about adopting the latest energy-efficient technologiesorturning to renewable sources of power. Sustainability is the responsibility of everyindividual every day. 🧍 It is about changing our behaviour and mindset to reducepowerand water consumption, thereby helping to control emissions and pollution levels. 🙌</p><p>Live sustainably NOW and show that there does not have to be a trade-off between theethical obligation to maintain a sustainable carbon footprint and the belief thatlifeshould be fulfilling and fun.</p><p>Today's consumers are increasingly eco-conscious, seeking sustainable solutions foreverything from their morning coffee to their tech accessories. That's whereEarthGrip comes in — offering stylish and eco-friendly phone cases that protect yourvaluable device while minimizing your environmental impact.</p><p>Environmental protection has been at the heart of EarthGrip Cases' business modelfrom day one and offering you sustainable products that serve benefits to theenvironment and the community is the most right thing to do. Let's create awaste-free future for a better planet TOGETHER.</p><p>If you're interested in learning more about the effects of e-waste and howpromoting the use of sustainable, biodegradable, and compostable mobile phoneaccessories will help, you can read more here: <a href=\"\\&quot;https://www.oceansrespect.com/en/blogs/news/avantages-ecologiques-etuis-protection-biodegradables-telephone-portable\\rel=\\noopener\" target=\"_blank\" title=\"\\&quot;The\"><em>The eco-friendly benefits of biodegradable protective cell phone cases</em></a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_HPCmQC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping Info",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "custom_liquid_KHdGPT",
+        "buy_buttons",
+        "collapsible_tab_teArbz",
+        "collapsible_tab_q74wPj",
+        "collapsible_tab_HPCmQC",
+        "share"
+      ],
+      "custom_css": [
+        ".select::after {border: 0.2rem solid rgb(var(--color-button));}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-3",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "product_description_1": {
+      "type": "product-description",
+      "disabled": true,
+      "settings": {}
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_description_1",
+    "related-products"
+  ]
+}

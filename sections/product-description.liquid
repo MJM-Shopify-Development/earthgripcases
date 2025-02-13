@@ -1,0 +1,63 @@
+{% style %}
+  .description__section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .description__text {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .description__text p,
+  .description__text ul {
+    text-align: left;
+  }
+  .description__img {
+    width: 80%;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 750px) {
+    .product__info-container {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .description__section {
+      flex-direction: row;
+    }
+    .description__section:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+    .description__img {
+      width: 45%;
+      height: 45%;
+    }
+  }
+{% endstyle %}
+
+{% assign descriptions = product.description | split: '***' %}
+
+<div class="description page-width" style="text-align: center;">
+  <h2 class="h1">{{ product.title }}</h2>
+  <h3 class="h2">Description</h3>
+  {% for description in descriptions %}
+    {% unless forloop.index0 == 0 %}
+      <hr style="margin: 20px 0;">
+    {% endunless %}
+    <div class="description__section">
+      {% assign product_image = product.images[forloop.index] %}
+      {% if product_image != blank %}
+        {% assign img_id = 'img-' | append: forloop.index %}
+        {{ product_image | image_url: width: 300, height: 300 | image_tag: id: img_id, class: 'description__img' }}
+      {% endif %}
+      {% assign desc_id = 'desc-' | append: forloop.index %}
+      <div id="{{desc_id}}" class="description__text">
+        {{ description }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

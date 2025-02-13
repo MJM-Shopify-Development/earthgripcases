@@ -1,0 +1,7 @@
+{% for entry in metaobjects.vendor_shipping_info.values %}
+  {% assign p_vendor = product.vendor | downcase %}
+  {% assign e_vendor = entry.vendor_name.value | downcase %}
+  {% if p_vendor == e_vendor %}
+    {{ entry.html_text.value }}
+  {% endif %}
+{% endfor %}

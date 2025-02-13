@@ -1,0 +1,26 @@
+<!-- Structured Data Breadcrumbs -->
+{%- assign url = request.origin -%}
+{%- assign crumbs = request.path | slice: 1, request.path.size | split: '/' -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ url }}"
+      },
+      {%- for crumb in crumbs -%}
+        {%- assign url = url | append: "/" | append: crumb -%}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index | plus: 1 }},
+        "name": "{{ crumb }}",
+        "item": "{{ url }}"
+      }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+</script>

@@ -1,0 +1,58 @@
+<!-- schema organization -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ shop.address.address1 | append: ", " | append: shop.address.address2 }}",
+      "addressLocality": "{{ shop.address.city }}",
+      "addressRegion": "{{ shop.address.province_code }}",
+      "postalCode": "{{ shop.address.zip }}",
+      "addressCountry": "{{ shop.address.country_code }}"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "{{ shop.email }}",
+      "telephone": "{{ shop.phone }}"
+    },
+    "description": "{{ shop.description }}",
+    "email": "{{ shop.email }}",
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": ["{{ shop.address.country_code }}"],
+      "customerRemorseReturnFees": "https://schema.org/FreeReturn",
+      "customerRemorseReturnLabelSource": "https://schema.org/ReturnLabelCustomerResponsibility",
+      "itemCondition": ["https://schema.org/DamagedCondition", "https://schema.org/NewCondition"],
+      "itemDefectReturnFees": "https://schema.org/FreeReturn",
+      "itemDefectReturnLabelSource": "https://schema.org/ReturnLabelCustomerResponsibility",
+      "returnPolicyCountry": "{{ shop.address.country_code }}",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 90,
+      "merchantReturnLink": "{{ shop.refund_policy.url }}",
+      "restockingFee": 0.00,
+      "returnLabelSource": "https://schema.org/ReturnLabelCustomerResponsibility",
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn",
+      "refundType": "https://schema.org/FullRefund"
+    },
+    "image": "{{ shop.brand.cover_image }}",
+    {% if settings.logo %}
+    "logo": {{ shop.brand.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% endif %}
+    "name": {{ shop.name | json }},
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "telephone": "{{ shop.phone }}",
+    "url": {{ request.origin | append: shop.url | json }}
+  }
+</script>
