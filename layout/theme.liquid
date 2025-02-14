@@ -343,31 +343,6 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
-    <!-- TrustBox widget - Review Collector -->
-    <style>
-      .trustpilot-widget {
-        position: fixed !important;
-        left: -50px;
-        bottom: 10px;
-      }
-    </style>
-    <div
-      class="trustpilot-widget"
-      data-locale="en-US"
-      data-template-id="56278e9abfbbba0bdcd568bc"
-      data-businessunit-id="67aae7628525b99cf909ab4a"
-      data-style-height="52px"
-      data-style-width="100%"
-    >
-      <a
-        href="https://www.trustpilot.com/review/earthgripcases.com"
-        target="_blank"
-        rel="noopener"
-        >Trustpilot</a
-      >
-    </div>
-    <!-- End TrustBox widget -->
-
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
