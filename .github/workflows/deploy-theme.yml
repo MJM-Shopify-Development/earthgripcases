@@ -28,7 +28,7 @@ jobs:
       - name: Lighthouse
         uses: shopify/lighthouse-ci-action@v1
         with:
-          access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
+          access_token: ${{ secrets.SHOP_ACCESS_TOKEN }} # Custom App create and install
           store: ${{ secrets.SHOP_STORE }} # store-handle.myshopify.com
           password: ${{ secrets.SHOP_PASSWORD }} # password from Online Store > Preferences page
           lhci_github_app_token: ${{ secrets.LHCI_GITHUB_APP_TOKEN }} # From Github Lighthouse app install process (Google Keep note: Github Org PWs)
