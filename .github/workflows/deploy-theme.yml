@@ -1,0 +1,34 @@
+name: Theme deploy
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler: 'latest'
+      - run: npm install -g @shopify/cli @shopify/theme
+      - run: npm install
+      - run: npm run styles & npm run scripts
+      - env:
+          SHOPIFY_FLAG_STORE: ${{ secrets.SHOP_STORE }} # store-handle.myshopify.com
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }} # Shopify Theme Access App password (installed in shop)
+          SHOPIFY_CLI_TTY: 0
+        run: shopify theme push --theme ${{ secrets.SHOPIFY_THEME_ID }} -a # Theme ID number or name of theme
+      - name: Lighthouse
+        uses: shopify/lighthouse-ci-action@v1
+        with:
+          access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
+          store: ${{ secrets.SHOP_STORE }} # store-handle.myshopify.com
+          password: ${{ secrets.SHOP_PASSWORD }} # password from Online Store > Preferences page
+          lhci_github_app_token: ${{ secrets.LHCI_GITHUB_APP_TOKEN }} # From Github Lighthouse app install process (Google Keep note: Github Org PWs)
