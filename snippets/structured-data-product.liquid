@@ -99,7 +99,7 @@
     {%- else -%}
     "@type": "Product",
     "name": "{{ product.title | escape }}",
-    "description": "{{ product.description | strip_html | escape }}",
+    "description": "{{ product.description | strip_html | escape | truncate: 4999  }}",
     "image": [
       "{{ product.featured_image | img_url: 'master' }}"
     ],
