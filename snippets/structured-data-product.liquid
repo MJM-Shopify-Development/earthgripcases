@@ -1,5 +1,6 @@
 <!-- Structured Data Product -->
-{%- assign description = product.description | strip_html | escape | truncate: 4999 -%}
+{%- assign description = product.description | strip_html | strip_newlines | escape | truncate: 4999 -%}
+{%- assign description = description | remove: '/\u.*:/gu' -%}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
