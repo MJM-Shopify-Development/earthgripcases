@@ -1,4 +1,5 @@
 <!-- Structured Data Product -->
+{%- assign description = product.description | strip_html | escape | truncate: 4999 -%}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -12,7 +13,7 @@
     },
       {% endif %}
     "name": "{{ product.title | escape }}",
-    "description": "{{ product.description | strip_html | escape | truncate: 4999 }}",
+    "description": "{{ description }}",
     "url": "{{ shop.url }}{{ product.url }}",
     "brand": {
       "@type": "Brand",
@@ -30,7 +31,7 @@
           "@type": "Product",
           "sku": "{{ variant.sku | escape }}",
           "name": "{{ product.title | escape }} - {{ variant.title | escape }}",
-          "description": "{{ product.description | strip_html | escape | truncate: 4999 }}",
+          "description": "{{ description }}",
           "image": [
             {%- if variant.image -%}
               "{{ variant.image.src | img_url: 'master' }}"
@@ -99,7 +100,7 @@
     {%- else -%}
     "@type": "Product",
     "name": "{{ product.title | escape }}",
-    "description": "{{ product.description | strip_html | escape | truncate: 4999  }}",
+    "description": "{{ description  }}",
     "image": [
       "{{ product.featured_image | img_url: 'master' }}"
     ],
