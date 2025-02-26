@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Red, White, & Green",
+            "heading": "Sip Style, Save the Planet!",
             "heading_size": "h1"
           }
         },
         "heading_h46hPp": {
           "type": "heading",
           "settings": {
-            "heading": "Biodegradable American Flag Phone Case",
+            "heading": "Sustainably Chic Protection for $37.25",
             "heading_size": "h1"
           }
         },
@@ -30,7 +30,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop Now",
-            "button_link_1": "shopify://products/rustic-us-flag-eco-friendly-phone-case",
+            "button_link_1": "shopify://products/organic-phone-case-coffee",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -44,14 +44,14 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/amflag_2_1_camo.jpg",
+        "image": "shopify://shop_images/Coffee_3.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-fa245736-8a03-4f48-a6b0-e88b837c97db",
-        "image_behavior": "fixed",
+        "color_scheme": "scheme-739f20ea-3506-4437-91c3-67f844dc1d7c",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false

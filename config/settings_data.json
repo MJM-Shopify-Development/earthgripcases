@@ -129,6 +129,28 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "sustainability_commitment_html": "<div>\n  <h3>Our Commitment To Sustainability</h3>\n  <p>\n    Sustainable living has become a hot trend for anyone who understands that the Earth\n    won't last forever. 😏 It's simply a way of living that requires as few resources as\n    possible and causes the least amount of damage to the environment. 🌍\n  </p>\n  <p>\n    Sustainability is not just about adopting the latest energy-efficient technologies\n    or\n    turning to renewable sources of power. Sustainability is the responsibility of every\n    individual every day. 🧍 It is about changing our behaviour and mindset to reduce\n    power\n    and water consumption, thereby helping to control emissions and pollution levels. 🙌\n  </p>\n  <p>\n    Live sustainably NOW and show that there does not have to be a trade-off between the\n    ethical obligation to maintain a sustainable carbon footprint and the belief that\n    life\n    should be fulfilling and fun.\n  </p>\n  <p>Today's consumers are increasingly eco-conscious, seeking sustainable solutions for\n    everything from their morning coffee to their tech accessories. That's where\n    EarthGrip comes in — offering stylish and eco-friendly phone cases that protect your\n    valuable device while minimizing your environmental impact.</p>\n  <p>Environmental protection has been at the heart of EarthGrip Cases' business model\n    from day one and offering you sustainable products that serve benefits to the\n    environment and the community is the most right thing to do. Let's create a\n    waste-free future for a better planet TOGETHER.</p>\n  <p>If you're interested in learning more about the effects of e-waste and how\n    promoting the use of sustainable, biodegradable, and compostable mobile phone\n    accessories will help, you can read more here: <a title=\"The eco-friendly benefits of biodegradable protective cell phone cases\" href=\"https://www.oceansrespect.com/en/blogs/news/avantages-ecologiques-etuis-protection-biodegradables-telephone-portable\" rel=\"noopener\" target=\"_blank\"> <em>The eco-friendly benefits of biodegradable\n        protective cell phone cases</em> </a></p>\n</div>",
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "4015264832934714879": {
+        "type": "shopify://apps/ecomsend-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -272,28 +294,6 @@
           "secondary_button_label": "#000000",
           "shadow": "#000000"
         }
-      }
-    },
-    "sections": {
-      "main-password-header": {
-        "type": "main-password-header",
-        "settings": {
-          "color_scheme": "scheme-1"
-        }
-      },
-      "main-password-footer": {
-        "type": "main-password-footer",
-        "settings": {
-          "color_scheme": "scheme-1"
-        }
-      }
-    },
-    "content_for_index": [],
-    "blocks": {
-      "4015264832934714879": {
-        "type": "shopify://apps/ecomsend-popups/blocks/app/a5670cf8-5705-4b01-ad9e-447033feae26",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
